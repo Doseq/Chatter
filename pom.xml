@@ -18,6 +18,8 @@
         <h2.version>2.1.212</h2.version>
         <spring-boot-starter-websocket.version>2.7.0</spring-boot-starter-websocket.version>
         <spring-boot-starter-validation.version>2.7.0</spring-boot-starter-validation.version>
+        <java-jwt.version>3.19.2</java-jwt.version>
+        <spring-boot-starter-security.version>2.7.0</spring-boot-starter-security.version>
     </properties>
     <dependencies>
         <dependency>
@@ -25,9 +27,11 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.kafka</groupId>
-            <artifactId>spring-kafka</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+            <version>${spring-boot-starter-security.version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -68,6 +72,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
             <version>${spring-boot-starter-validation.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.auth0</groupId>
+            <artifactId>java-jwt</artifactId>
+            <version>${java-jwt.version}</version>
         </dependency>
     </dependencies>
 
