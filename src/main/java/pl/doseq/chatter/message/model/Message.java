@@ -3,9 +3,7 @@ package pl.doseq.chatter.message.model;
 import lombok.*;
 import pl.doseq.chatter.user.model.User;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.time.LocalDateTime;
 
@@ -18,6 +16,7 @@ import java.time.LocalDateTime;
 public class Message {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     @NotBlank
     private String content;
